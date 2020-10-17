@@ -1,6 +1,13 @@
+## Running on Linux
+To run on linux follow this link to the official Spring guide https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html
+
+## Running tests
+To run tests use the command:
+
+`maven clean build`
 
 
-to add a child to the family tree use the command:
+To add a child to the family tree use the command:
 
 
 `curl -X POST -H “Content-Type: application/json” \ -d ‘{JSON_BODY}’ \ localhost:8080/person`
