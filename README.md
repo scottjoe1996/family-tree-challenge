@@ -1,6 +1,8 @@
 
 
-to add a child to the family tree use the command: 
+to add a child to the family tree use the command:
+
+
 `curl -X POST -H “Content-Type: application/json” \ -d ‘{JSON_BODY}’ \ localhost:8080/person`
 
 JSON_BODY example 
