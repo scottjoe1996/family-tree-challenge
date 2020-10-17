@@ -15,7 +15,7 @@
 	<description>Project for the family tree api challenge</description>
 
 	<properties>
-		<java.version>15</java.version>
+		<java.version>14</java.version>
 	</properties>
 
 	<dependencies>
