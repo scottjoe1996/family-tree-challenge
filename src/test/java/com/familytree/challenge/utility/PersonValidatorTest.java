@@ -103,4 +103,18 @@ class PersonValidatorTest {
 
         assertThat(exception.getMessage()).isEqualTo("Person gender cannot be null");
     }
+
+    @Test
+    public void validateGenderShouldNotThrowExceptionWhenGenderIsValid(){
+        assertDoesNotThrow(() -> PersonValidator.validateGender(Gender.FEMALE));
+    }
+
+    @Test
+    public void validateGenderShouldThrowGenderExceptionWhenGenderIsNull(){
+        Exception exception = assertThrows(GenderException.class, () -> {
+            PersonValidator.validateGender(null);
+        });
+
+        assertThat(exception.getMessage()).isEqualTo("Person gender cannot be null");
+    }
 }

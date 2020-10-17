@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public interface PersonRepo {
 
-    Boolean save(Person person);
+    Person save(Person person);
 
     Person findById(UUID id);
 }

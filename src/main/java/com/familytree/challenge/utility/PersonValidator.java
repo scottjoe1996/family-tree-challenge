@@ -44,7 +44,11 @@ public class PersonValidator {
             throw new ValidationException("Person mother id cannot be null");
         }
 
-        if(person.getGender() == null) {
+        validateGender(person.getGender());
+    }
+
+    public static void validateGender(Gender gender) {
+        if(gender == null) {
             throw new GenderException("Person gender cannot be null");
         }
     }

@@ -1,7 +1,6 @@
 package com.familytree.challenge.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.familytree.challenge.models.Gender;
 import com.familytree.challenge.models.Person;
@@ -30,9 +29,12 @@ class PersonRepositoryTests {
     }
 
     @Test
-    public void saveShouldReturnTrueOnSuccess() {
+    public void saveShouldReturnPersonOnSuccess() {
         PersonRepository personRepository = new PersonRepository();
-        assertTrue(personRepository.save(new Person(UUID.randomUUID(), UUID.randomUUID(),
-            UUID.randomUUID(), Gender.FEMALE)));
+
+        Person personToSave = new Person(UUID.randomUUID(), UUID.randomUUID(),
+            UUID.randomUUID(), Gender.FEMALE);
+
+        assertThat(personRepository.save(personToSave)).isEqualTo(personToSave);
     }
 }

@@ -17,8 +17,9 @@ public class PersonRepository implements PersonRepo {
     }
 
     @Override
-    public Boolean save(Person person) {
-        return personList.add(person);
+    public Person save(Person person) {
+        personList.add(person);
+        return person;
     }
 
     @Override
